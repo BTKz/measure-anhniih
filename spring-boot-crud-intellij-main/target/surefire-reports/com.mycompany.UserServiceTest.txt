@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.UserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.36 s <<< FAILURE! - in com.mycompany.UserServiceTest
+testGetAllUsers  Time elapsed: 0.023 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+userRepository.findAll();
+-> at com.mycompany.UserServiceTest.testGetAllUsers(UserServiceTests.java:434)
+Actually, there were zero interactions with this mock.
+
+	at com.mycompany.UserServiceTest.testGetAllUsers(UserServiceTests.java:434)
+
+testGetUserById_UserNotFound  Time elapsed: 0.03 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+userRepository.findById(49);
+-> at com.mycompany.UserServiceTest.testGetUserById_UserNotFound(UserServiceTests.java:421)
+Actually, there were zero interactions with this mock.
+
+	at com.mycompany.UserServiceTest.testGetUserById_UserNotFound(UserServiceTests.java:421)
+

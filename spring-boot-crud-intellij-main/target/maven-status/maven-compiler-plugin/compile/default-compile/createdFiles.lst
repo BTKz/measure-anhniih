@@ -1,0 +1,7 @@
+com\mycompany\MainController.class
+com\mycompany\MyWebAppApplication.class
+com\mycompany\user\UserNotFoundException.class
+com\mycompany\user\UserService.class
+com\mycompany\user\User.class
+com\mycompany\user\UserRepository.class
+com\mycompany\user\UserController.class

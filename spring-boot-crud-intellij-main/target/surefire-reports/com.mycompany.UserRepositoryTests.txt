@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.UserRepositoryTests
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 1, Errors: 3, Skipped: 0, Time elapsed: 7.795 s <<< FAILURE! - in com.mycompany.UserRepositoryTests
+testEditUser  Time elapsed: 0.514 s  <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [users.UK_6dotkott2kjsp8vw4d0m25fb7]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'newemail@gmail.com' for key 'users.UK_6dotkott2kjsp8vw4d0m25fb7'
+
+testGet  Time elapsed: 0.029 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting Optional to contain a value but it was empty.
+	at com.mycompany.UserRepositoryTests.testGet(UserRepositoryTests.java:78)
+
+testAddNew  Time elapsed: 0.043 s  <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [users.UK_6dotkott2kjsp8vw4d0m25fb7]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at com.mycompany.UserRepositoryTests.testAddNew(UserRepositoryTests.java:46)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at com.mycompany.UserRepositoryTests.testAddNew(UserRepositoryTests.java:46)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'bat@gmail.com' for key 'users.UK_6dotkott2kjsp8vw4d0m25fb7'
+	at com.mycompany.UserRepositoryTests.testAddNew(UserRepositoryTests.java:46)
+
+testDelete  Time elapsed: 0.03 s  <<< ERROR!
+org.springframework.dao.EmptyResultDataAccessException: No class com.mycompany.user.User entity with id 64 exists!
+	at com.mycompany.UserRepositoryTests.testDelete(UserRepositoryTests.java:85)
+
